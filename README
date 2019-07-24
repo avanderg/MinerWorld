@@ -5,8 +5,9 @@ This project was to refactor code to make it object-oriented. The given_code dir
 given, and the final directory contains the refactored code. The initial program is a simple "game" where miners
 hunt for ore and mine it then bring it to a blacksmith. After a period of time, iron turns to iron ore and iron ore
 turns into ore blobs. When iron changes to iron ore it makes a quake and ore blobs move toward quakes. The refactored
-version includes this same functionality but also adds functionality defined in WORLD_EVENT.txt.
-The program can be open and run in Intellij or with the supplied Makefile.
+version includes this same functionality but also adds functionality defined in WORLD_EVENT.txt. It also includes
+an implementation of the A-star pathing algorithm. The program can be open and run in Intellij or with the supplied
+Makefile.
 
 Both projects can be built with:
     $ make
@@ -18,3 +19,5 @@ The refactored code can be run with:
     $ make run
 And the given code can be run with:
     $ make run_old
+The .class files can be removed with:
+    $ make clean

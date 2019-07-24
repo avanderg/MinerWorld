@@ -54,18 +54,6 @@ final class WorldModel
         return Optional.empty();
     }
 
-    public void tryAddEntity(Entity entity)
-    {
-        //if (isOccupied(entity.getPosition()))
-        //{
-            // arguably the wrong type of exception, but we are not
-            // defining our own exceptions yet
-          //  throw new IllegalArgumentException("position occupied");
-        //}
-
-        addEntity(entity);
-    }
-
     public boolean withinBounds(Point pos)
     {
         return pos.y >= 0 && pos.y < numRows &&
@@ -253,7 +241,7 @@ final class WorldModel
                     scheduler.unscheduleAllEvents(entity);
                     Freeze freeze = new Freeze("freeze", p, imageStore.getImageList("freeze"), 900,
                             100);
-                    tryAddEntity(freeze);
+                    addEntity(freeze);
                     freeze.scheduleActions(scheduler, this, imageStore);
                 }
             }

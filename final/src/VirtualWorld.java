@@ -88,7 +88,7 @@ public final class VirtualWorld
                     500, Functions.WYVERN_ANIMATION_PERIOD);
 //            System.out.println(imageStore.getImageList("miner"));
 //            System.out.println(imageStore.getImageList(Functions.BGND_KEY));
-            world.tryAddEntity(wyvern);
+            world.addEntity(wyvern);
             wyvern.scheduleActions(scheduler, world, imageStore);
 //            System.out.println(imageStore.getImages());
 

@@ -81,7 +81,7 @@ public class Loader {
                     Integer.parseInt(properties[Functions.MINER_LIMIT]), 0,
                     Integer.parseInt(properties[Functions.MINER_ACTION_PERIOD]),
                     Integer.parseInt(properties[Functions.MINER_ANIMATION_PERIOD]));
-            world.tryAddEntity(entity);
+            world.addEntity(entity);
         }
 
         return properties.length == Functions.MINER_NUM_PROPERTIES;
@@ -97,7 +97,7 @@ public class Loader {
                     Integer.parseInt(properties[Functions.OBSTACLE_ROW]));
             Obstacle entity = new Obstacle(properties[Functions.OBSTACLE_ID],
                     pt, imageStore.getImageList(Functions.OBSTACLE_KEY));
-            world.tryAddEntity(entity);
+            world.addEntity(entity);
         }
 
         return properties.length == Functions.OBSTACLE_NUM_PROPERTIES;
@@ -113,7 +113,7 @@ public class Loader {
             Ore entity = new Ore(properties[Functions.ORE_ID],
                     pt,  imageStore.getImageList(Functions.ORE_KEY),
                     Integer.parseInt(properties[Functions.ORE_ACTION_PERIOD]));
-            world.tryAddEntity(entity);
+            world.addEntity(entity);
         }
 
         return properties.length == Functions.ORE_NUM_PROPERTIES;
@@ -128,7 +128,7 @@ public class Loader {
                     Integer.parseInt(properties[Functions.SMITH_ROW]));
             Blacksmith entity = new Blacksmith(properties[Functions.SMITH_ID],
                     pt, imageStore.getImageList(Functions.SMITH_KEY));
-            world.tryAddEntity(entity);
+            world.addEntity(entity);
         }
 
         return properties.length == Functions.SMITH_NUM_PROPERTIES;
@@ -144,7 +144,7 @@ public class Loader {
             Vein entity = new Vein(properties[Functions.VEIN_ID],
                     pt,imageStore.getImageList(Functions.VEIN_KEY),
                     Integer.parseInt(properties[Functions.VEIN_ACTION_PERIOD]));
-            world.tryAddEntity(entity);
+            world.addEntity(entity);
         }
 
         return properties.length == Functions.VEIN_NUM_PROPERTIES;
